@@ -40,8 +40,8 @@ const ProfileScreen = () => {
       <Text style={styles.description}>
         {user.email || 'This is a brief description of the user.'}
       </Text>
-      <Button title="Edit Profile" onPress={handleEdit} />
-      <Button title="Delete Account" color="red" onPress={handleDeleteAccount} />
+      <Button title="Edit Profile" onPress={handleEdit} color={styles.button.color} />
+      <Button title="Delete Account" color={styles.deleteButton.color} onPress={handleDeleteAccount} />
     </View>
   );
 };
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: '#F8C291', // Laranja Pastel Claro
   },
   profileImage: {
     width: 150,
@@ -63,12 +64,19 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: '#F76C6C', // Laranja Pastel Escuro
   },
   description: {
     fontSize: 16,
-    color: 'gray',
+    color: '#F5A623', // Laranja Pastel
     marginBottom: 20,
     textAlign: 'center',
+  },
+  button: {
+    color: '#F5A623', // Laranja Pastel
+  },
+  deleteButton: {
+    color: '#F76C6C', // Laranja Pastel Escuro
   },
 });
 
